@@ -1,0 +1,40 @@
+.para{
+    margin-top: 150px;
+}
+.imag {
+margin-top: -550px;
+margin-left: 600px;
+width: 80px;
+}
+
+.txtleft{
+    position: absolute;
+    left: 800px;
+    bottom: -350px;
+
+
+}
+.txtright{
+    position: absolute;
+    right: 800px;
+    bottom: -800px;
+
+
+}
+.txtleft3{
+    position: absolute;
+    left: 800px;
+    bottom: -1200px;
+
+}
+.default {
+    border-color: #000000;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+  }
+  
+  .default:hover {
+    background: #2cd2eb;
+  }
