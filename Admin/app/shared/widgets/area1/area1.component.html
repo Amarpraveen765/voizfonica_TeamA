@@ -1,0 +1,39 @@
+<html>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<body>
+    <!-- <div style="display:inline;width:100%">
+        <div style="display:inline;"><button>Add Row</button> </div> -->
+        <!-- <div style="display:inline;margin-left:45%"><button">Order</button> </div>
+    </div> -->
+    <br />
+    <h1 style="text-align: center;"><b>Broadband Plans</b></h1>
+    <table class="style">
+        <tr>
+            <th style="max-width: 60px;">Id</th>
+            <th>Sim</th>
+            <th>Price</th>
+            <th>Data</th>
+            <th>Calls</th>
+            <th>SMS</th>
+            <th>Speed</th>
+            <th>Delete</th>
+
+        </tr>
+        <tr *ngFor="let broadbands of broadbands">
+            <td>{{broadbands.id}}</td>
+            <td>{{broadbands.sim}}</td>
+            <td>₹ {{broadbands.price}}</td>
+            <td>{{broadbands.data}} GB</td>
+            <td>{{broadbands.calls}}</td>
+            <td>{{broadbands.sms}} SMS/day</td>
+            <td>{{broadbands.speed}} Mbps</td>
+            <td>
+                <button class="fa fa-trash" style="width: 100px;" (click)="deletePlans(broadbands.id)"></button>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

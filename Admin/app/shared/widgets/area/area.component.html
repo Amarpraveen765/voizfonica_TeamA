@@ -1,0 +1,59 @@
+<html>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<body style="padding-bottom: 50px;">
+    <!-- <div style="display:inline;width:100%">
+        <div style="display:inline;"><button>Add Row</button> </div> -->
+        <!-- <div style="display:inline;margin-left:45%"><button">Order</button> </div>
+    </div> -->
+    <br />
+    <h1 style="text-align: center;"><b>Mobile Plans</b></h1>
+    <table class="style">
+        <tr>
+            <th style="max-width: 60px;">Id</th>
+            <th>Sim</th>
+            <th>Price</th>
+            <th>Data</th>
+            <th>Calls</th>
+            <th>SMS</th>
+            <th>Days/Month</th>
+        </tr>
+        <tr *ngFor="let mobiles of mobiles">
+            <td>{{mobiles.id}}</td>
+            <td>{{mobiles.sim}}</td>
+            <td>₹ {{mobiles.price}}</td>
+            <td>{{mobiles.data}} GB</td>
+            <td>{{mobiles.calls}}</td>
+            <td>{{mobiles.sms}} SMS/day</td>
+            <td>{{mobiles.days}}</td>
+        </tr>
+    </table>
+    <br />
+    <h1 style="text-align: center;"><b>Broadband Plans</b></h1>
+    <table class="style">
+        <tr>
+            <th style="max-width: 60px;">Id</th>
+            <th>Sim</th>
+            <th>Price</th>
+            <th>Data</th>
+            <th>Calls</th>
+            <th>SMS</th>
+            <th>Speed</th>
+        </tr>
+        <tr *ngFor="let broadbands of broadbands">
+            <td>{{broadbands.id}}</td>
+            <td>{{broadbands.sim}}</td>
+            <td>₹ {{broadbands.price}}</td>
+            <td>{{broadbands.data}} GB</td>
+            <td>{{broadbands.calls}}</td>
+            <td>{{broadbands.sms}} SMS/day</td>
+            <td>{{broadbands.speed}} Mbps</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+</body>
+
+</html>

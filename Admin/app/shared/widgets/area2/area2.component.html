@@ -1,0 +1,103 @@
+<body>
+    <div class="wrapper"  >
+        <div class="title">
+            Add Mobile Plans
+        </div>
+        <div [formGroup]="profileForm" class="form">
+            <div class="inputfield" >
+                <label>Sim</label>
+                <div class="custom_select">
+                    <select name="sim">
+                        <option value="">Select</option>
+                        <option value="prepaid">Prepaid</option>
+                        <option value="postpaid">Postpaid</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="inputfield">
+                <label>Price</label>
+                <input type="number" class="input" placeholder="amount" name="price" required formControlName="price">
+            </div>
+            <div class="inputfield">
+                <label>Days</label>
+                <input type="number" class="input" placeholder="No of days / months" name="days" formControlName="days"> 
+            </div>
+            <div class="inputfield">
+                <label>Data</label>
+                <input type="number" class="input" placeholder="GB" name="data" formControlName="data">
+            </div>
+            <div class="inputfield">
+                <label>Add on</label>
+                <input type="number" class="input" placeholder="amount" name="addon" formControlName="addon">
+            </div>
+            <div class="inputfield">
+                <label>SMS</label>
+                <input type="number" class="input" placeholder="number of sms's" name="sms" formControlName="sms">
+            </div>
+
+            <div class="inputfield">
+                <label>Calls</label>
+                <input type="text" class="input" placeholder="ex: Unlimited" name="calls" formControlName="calls">
+            </div>
+
+            <div class="inputfield">
+                <input type="submit" value="Submit" class="btn" (click)="onSubmit()">
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+
+    <!-- ************************************************************* -->
+
+
+
+
+
+    <div class="wrapper">
+        <div class="title">
+            Add Broadband Plans
+        </div>
+        <div [formGroup]="profileForm" class="form">
+            <div class="inputfield">
+                <label>Sim</label>
+                <div class="custom_select">
+                    <select name="sim1" formControlName="sim1">
+                        <option value="">Select</option>
+                        <option value="prepaid">Prepaid</option>
+                        <option value="postpaid">Postpaid</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="inputfield">
+                <label>Price</label>
+                <input type="number" class="input" placeholder="amount" name="price1" formControlName="price1">
+            </div>
+
+            <div class="inputfield">
+                <label>Data</label>
+                <input type="number" class="input" placeholder="GB" name="data1" formControlName="data1">
+            </div>
+
+            <div class="inputfield">
+                <label>Speed</label>
+                <input type="number" class="input" placeholder="In number" name="sp" formControlName="sp">
+            </div>            
+            
+            <div class="inputfield">
+                <label>Calls</label>
+                <input type="text" class="input" placeholder="Unlimited" name="calls1" formControlName="calls1">
+            </div>
+
+            <div class="inputfield">
+                <input type="submit" value="Submit" class="btn" (click)="onSubmit1()">
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+</body>

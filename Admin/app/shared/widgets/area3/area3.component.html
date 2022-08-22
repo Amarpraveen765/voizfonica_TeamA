@@ -1,0 +1,39 @@
+<html>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<body>
+    <!-- <div style="display:inline;width:100%">
+        <div style="display:inline;"><button>Add Row</button> </div> -->
+        <!-- <div style="display:inline;margin-left:45%"><button">Order</button> </div>
+    </div> -->
+    <br />
+    <h1 style="text-align: center;"><b>Mobile Plans</b></h1>
+    <table class="style">
+        <tr>
+            <th style="max-width: 60px;">Id</th>
+            <th>Sim</th>
+            <th>Price</th>
+            <th>Data</th>
+            <th>Calls</th>
+            <th>SMS</th>
+            <th>Days/Month</th>
+            <th>Delete</th>
+
+        </tr>
+        <tr *ngFor="let mobiles of mobiles">
+            <td>{{mobiles.id}}</td>
+            <td>{{mobiles.sim}}</td>
+            <td>₹ {{mobiles.price}}</td>
+            <td>{{mobiles.data}} GB</td>
+            <td>{{mobiles.calls}}</td>
+            <td>{{mobiles.sms}} SMS/day</td>
+            <td>{{mobiles.days}}</td>
+            <td>
+                <button class="fa fa-trash" style="width: 100px;" (click)="deletePlans(mobiles.id)"></button>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

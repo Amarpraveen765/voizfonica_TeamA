@@ -1,0 +1,39 @@
+<html>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<body>
+    <!-- <div style="display:inline;width:100%">
+        <div style="display:inline;"><button>Add Row</button> </div> -->
+        <!-- <div style="display:inline;margin-left:45%"><button">Order</button> </div>
+    </div> -->
+    <br />
+    <h1 style="text-align: center; "><b>Delete Users List</b></h1>
+    <table class="style">
+        <tr>
+            <th style="max-width: 60px;">Id</th>
+            <th>Name</th>
+            <th>User Type</th>
+            <th>Email</th>
+            <th>Mobile Number</th>
+            <th>Otp</th>
+            <th>Password</th>
+            <th>Delete</th>
+
+        </tr>
+        <tr *ngFor="let users of users">
+            <td>{{users.id}}</td>
+            <td>{{users.username}}</td>
+            <td>{{users.usertype}}</td>
+            <td>{{users.email}}</td>
+            <td>{{users.mobilenumber}}</td>
+            <td>{{users.otp}}</td>
+            <td>{{users.password}}</td>
+            <td>
+                <button class="fa fa-trash" style="width: 100px;" (click)="deleteUsers(users.id)"></button>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
