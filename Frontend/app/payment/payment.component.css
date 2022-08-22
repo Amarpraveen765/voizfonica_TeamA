@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    background-color: white;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 37px;
+}
+
+
+
+.container {
+    margin-left: 200px;
+    margin-top: 20px;
+    width: 500px;
+    height: 500px;
+    border: 0px solid;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    justify-content: space-around;
+    box-shadow: 2px 5px 15px black;
+    border-radius: 8px;
+    ;
+
+}
+
+h2 {
+    text-align: center;
+    margin-top: 240px;
+    margin-left: 440px;
+}
+
+.container1 {
+    margin-top: 180px;
+    margin-left: 200px;
+    /* margin-right: 200px; */
+    width: 300px;
+    height: 200px;
+    border: 0px solid;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    justify-content: space-around;
+    box-shadow: 2px 5px 15px black;
+    margin-left: 800px 50px;
+    border-radius: 8px;
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.first-row {
+    display: flex;
+}
+
+.owner {
+    width: 100%;
+    margin-right: 30px;
+}
+
+.input-field {
+    border: 1px solid #999;
+
+}
+
+.input-field input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+.selection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selection select {
+    padding: 10px 10px;
+}
+
+.input-field:hover {
+    background-color: dodgerblue;
+}
+
+
+a {
+    background-color: rgb(33, 150, 243);
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    transition: 0.5s;
+    border-radius: 6px;
+}
+
+a:hover {
+    background-color: rgb(56, 142, 82);
+}
+
+
+
+
+.cards img {
+    width: 100px;
+}
+
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 40px 0px;
+}
+
+/*to remove the up and down arrows in input box to number type*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

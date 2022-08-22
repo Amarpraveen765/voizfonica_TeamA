@@ -1,0 +1,34 @@
+<br>
+<div style="background-color:white">
+    <h1 style="text-align: center;color:black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;margin-top: 50px;">Broadband Prepaid Plans</h1>
+
+<br>
+
+
+
+    <div class="container">
+        <div *ngFor="let broadbands of broadbands">
+            <div *ngIf="broadbands.sim=='Prepaid'">
+                <div class="card">
+                    <div class="card-title">
+                        <p><Span>₹ {{broadbands.price}}</Span>/ Month</p>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>
+                                <h4>{{broadbands.data}} Data</h4>
+                            </li>
+                            <li>
+                                <h4>Speed Upto {{broadbands.speed}}Mbps</h4>
+                            </li>
+                            <li>
+                                <h4>{{broadbands.calls}} SMS/day</h4>
+                            </li>
+                        </ul>
+                        <button (click)="createInvoice(broadbands.id,broadbands.price)">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

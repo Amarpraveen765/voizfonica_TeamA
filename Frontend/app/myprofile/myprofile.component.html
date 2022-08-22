@@ -1,0 +1,224 @@
+<div class="card">
+    <h4><i class="fa fa-user-circle fa-5x"></i>&nbsp;&nbsp;&nbsp;<b style="font-size: 35px;">User Profile</b></h4>
+        <p style="font-size: 20px;">Manage & Edit Profile</p><br>
+    <div class="container" *ngFor="let users of users">
+        <div class="row" *ngIf="users.username == usernam1" >
+            <div class="column">
+                <div class="card2">
+                    <h3>Username</h3>
+                    <table id="customers">
+                        <tr>
+                            <td>{{users.username}}</td>&nbsp; &nbsp;
+                        </tr>
+                    </table>
+
+                    <button class="btn btn-primary" style="margin-left: 900px;margin-top: -80px;"><a
+                            data-toggle="modal" data-target="#changeusername">Edit</a></button>
+                </div>
+            </div><br>
+
+            <div class="column">
+                <div class="card2">
+                    <h3>Email</h3>
+                    <table id="customers">
+                        <tr>
+                            <td>{{users.email}}</td>&nbsp; &nbsp;
+                        </tr>
+                    </table>
+                    <button class="btn btn-primary" style="margin-left: 900px;margin-top: -80px;"><a
+                            data-toggle="modal" data-target="#changeEmail">Edit</a></button>
+                </div>
+            </div><br>
+
+            <div class="column">
+                <div class="card2" style="padding-bottom: 30px;"><br>
+                    <h3>Mobile Number</h3>
+                    <table id="customers">
+                        <tr>
+                            <td>{{users.mobilenumber}}</td>&nbsp; &nbsp;
+                        </tr>
+                    </table>
+                    <h1> </h1>
+                </div>
+            </div><br>
+
+            <div class="column">
+                <div class="card2">
+                    <h3>Password</h3>
+                    <table id="customers">
+                        <tr>
+                            <td>**********</td>&nbsp; &nbsp;
+                        </tr>
+                    </table>
+                    <button class="btn btn-primary" style="margin-left: 810px;margin-top: -80px;"><a data-toggle="modal"
+                            data-target="#changepassword">Change Password</a></button>
+                </div>
+            </div><br>
+        </div>
+    </div>
+</div>
+
+<br><br>
+
+<!-- changing data -->
+
+<!-- change username -->
+<div class="modal fade" id="changeusername" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" id="teama">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel2" style="text-align:center;font-size:35px;color: black;">
+                    <b>Change Username</b>
+                </h3>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="changeuser" (ngSubmit)="changeusername()">
+                    <div class="form-group">
+                        <label style="font-size: 17.5px;color: black;">Old User Name</label>
+                        <span style="color: red;font-size:25px" class="red-star">*</span>
+                        <input type="text" formControlName="olduser" class="form-control"
+                            placeholder="Old Username" id="b" style="height:45px ;padding-top: 15px;" required>
+                        <div *ngIf=" f1['olduser'].touched">
+                            <div *ngIf="f1['olduser'].invalid" class="text-danger">Enter valid Username</div>
+                        </div>
+                        <br><br>
+                    </div>
+                    <div class="form-group">
+                        <label style="font-size: 17.5px;color: black;">New User Name</label>
+                        <span style="color: red;font-size:25px" class="red-star">*</span>
+                        <input type="text" formControlName="newuser" class="form-control"
+                            placeholder="New Username" id="b" style="height:45px ;padding-top: 15px;" required>
+                        <div *ngIf=" f1['newuser'].touched">
+                            <div *ngIf="f1['newuser'].invalid" class="text-danger">Enter valid Username</div>
+                        </div>
+                        <br><br>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="cancle" class="btn btn-secondary" data-dismiss="modal"
+                            style="border-color:black" (click)="sclose1()">Close</button>
+                        <button type="submit" class="btn btn-primary" style="border-color:black" data-toggle="modal"
+                            [disabled]="!changeuser.valid">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Change Email -->
+<div class="modal fade" id="changeEmail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" id="teama">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel2" style="text-align:center;font-size:35px;color: black;">
+                    <b>Change Email</b>
+                </h3>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="changemail" (ngSubmit)="changeemail()">
+                    <div class="form-group">
+                        <label style="font-size: 17.5px;color: black;">Old Email</label>
+                        <span style="color: red;font-size:25px" class="red-star">*</span>
+                        <input type="text" formControlName="oldmail" class="form-control"
+                            placeholder="Old Email" id="b" style="height:45px ;padding-top: 15px;" required>
+                        <div *ngIf=" f2['oldmail'].touched">
+                            <div *ngIf="f2['oldmail'].invalid" class="text-danger">Enter valid email</div>
+                        </div>
+                        <br><br>
+                    </div>
+                    <div class="form-group">
+                        <label style="font-size: 17.5px;color: black;">New Email</label>
+                        <span style="color: red;font-size:25px" class="red-star">*</span>
+                        <input type="text" formControlName="newmail" class="form-control"
+                            placeholder="New Email" id="b" style="height:45px ;padding-top: 15px;" required>
+                        <div *ngIf=" f2['newmail'].touched">
+                            <div *ngIf="f2['newmail'].invalid" class="text-danger">Enter valid email</div>
+                        </div>
+                        <br><br>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="cancle" class="btn btn-secondary" data-dismiss="modal"
+                            style="border-color:black" (click)="sclose2()">Close</button>
+                        <button type="submit" class="btn btn-primary" style="border-color:black" data-toggle="modal"
+                            [disabled]="!changemail.valid">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Change Password -->
+<div class="modal fade" id="changepassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" id="teama">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel2" style="text-align:center;font-size:35px;color: black;">
+                    <b>Change Password</b>
+                </h3>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="changepass" (ngSubmit)="forgotpas()">
+                    <div class="form-group">
+                        <label style="font-size: 17.5px;color: black;">Mobile Number</label>
+                        <span style="color: red;font-size:25px" class="red-star">*</span>
+                        <input type="text" formControlName="mobilenumber3" class="form-control"
+                            placeholder="Mobile Number" id="b" style="height:45px ;padding-top: 15px;" required>
+                        <div *ngIf=" f4['mobilenumber3'].touched">
+                            <div *ngIf="f4['mobilenumber3'].invalid" class="text-danger">Enter valid mobile number</div>
+
+                        </div>
+                        <br><br>
+                        <a style="font-size:medium ;" (click)="validation()">Generate OTP</a>
+                    </div>
+                    <div class="form-group">
+                        <label style="font-size: 17.5px;color: black;">One Time Password</label>
+                        <span style="color: red;font-size:25px" class="red-star">*</span>
+                        <input type="number" formControlName="otp2" class="form-control" placeholder="OTP" id="b"
+                            style="height:45px ;padding-top: 15px;" required>
+                        <div *ngIf=" f4['otp2'].touched">
+                            <div *ngIf="f4['otp2'].invalid" class="text-danger">Enter Valid OTP</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label style="font-size: 17.5px;color: black;">Password</label>
+                        <span style="color: red;font-size:25px" class="red-star">*</span>
+                        <input [type]="changetype2 ? 'password':'text'" formControlName="password3" class="form-control"
+                            aria-describedby="emailHelp" id="b" placeholder="Password"
+                            style="height:45px ;padding-top: 15px;" required>
+                        <span class="eyeicon" (click)="viewpass2()"><i [ngClass]="hide2?'fa fa-eye-slash':'fa fa-eye'"
+                                style="font-size:26px ; color:black"></i></span>
+                        <div *ngIf=" f4['password3'].touched">
+                            <div *ngIf="f4['password3'].invalid" class="text-danger">
+                                <h6></h6>Password should contain atleast one number, capital & special character
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+
+                        <label style="font-size: 17.5px;color: black;">Re-Password</label>
+                        <span style="color: red;font-size:25px" class="red-star">*</span>
+                        <input [type]="changetype ? 'password':'text'" formControlName="repassword" class="form-control"
+                            placeholder="Re-enter Password" id="b" style="height:45px ;padding-top: 15px;">
+                        <span class="eyeicon1" (click)="viewpass()"><i [ngClass]="hide?'fa fa-eye-slash':'fa fa-eye'"
+                                style="font-size:26px ; color:black"></i></span>
+                        <div *ngIf=" f4['repassword'].touched">
+                            <div *ngIf="f4['repassword'].invalid" class="text-danger">Password should contain atleast
+                                one
+                                number, capital & special character</div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="cancle" class="btn btn-secondary" data-dismiss="modal"
+                            style="border-color:black" (click)="pclose()">Close</button>
+                        <button type="submit" class="btn btn-primary" style="border-color:black" data-toggle="modal"
+                            [disabled]="!changepass.valid">Change Password</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

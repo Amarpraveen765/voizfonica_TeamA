@@ -1,0 +1,87 @@
+#h {
+    margin-left: 330px;
+}
+
+#mobilenumber,
+#password {
+    width: 7.5cm;
+    display: inline-block;
+    border: 3px solid rgb(104, 14, 140);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#team1 {
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 800px;
+    height: 700px;
+}
+
+#exampleModal {
+    background-color: rgba(0, 0, 0, 0.766);
+
+}
+
+#teama {
+    border-radius: 0.5cm;
+
+}
+
+input::placeholder {
+    font: 18px/3 sans-serif;
+
+}
+#exampleModal1
+{
+  
+    padding-top: 250px;
+    background-color: rgba(15, 8, 8, 0.707);
+    border-radius: none;
+}
+#b{
+    border: 2px solid rgb(104, 14, 140);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    box-sizing: border-box;
+    display: inline-block;
+    
+}
+/*to remove the up and down arrows in input box to number type*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.eyeicon{
+    padding-top: 9px;
+    position: absolute;
+    right: 25px;
+    cursor: pointer;
+
+}
+.eyeicon1{
+    padding-top: 9px;
+    position: absolute;
+    right: 25px;
+    cursor: pointer;
+}
+.eyeicon3{
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+}
+a{
+    cursor: pointer;
+}
