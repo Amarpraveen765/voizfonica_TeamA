@@ -1,0 +1,19 @@
+=========================================================================
+For Frontend: before starting the project install this libraries.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+npm install font-awesome --save
+npm i sweetalert2
+npm i jspdf
+==========================================================================
+
+===========================================================================
+For Admin: before starting the project install this libraries.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+ng add @angular/material
+npm i highcharts-angular --save
+npm i highcharts --save
+npm i @angular/flex-layout @angular/cdk --save
+============================================================================
+
+
+
